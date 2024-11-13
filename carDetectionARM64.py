@@ -32,6 +32,8 @@ def process_video(video_path, car_cascade):
 
     start_time = time.time()
     processed_frames = 0
+    total_cars_detected = 0  # Counter for the total number of cars detected
+
     while True:
         ret, frame = cap.read()
         if not ret:
@@ -39,13 +41,18 @@ def process_video(video_path, car_cascade):
 
         cars = detect_cars(frame, car_cascade)
         draw_rectangles(frame, cars)
+
+        # Increment total car count by the number of cars detected in this frame
+        total_cars_detected += len(cars)
         processed_frames += 1
+
         if processed_frames % 10 == 0:  # Prints a message every 10 frames
             print(f"Processed {processed_frames}/{frame_count} frames...")
 
     end_time = time.time()
     print(f"Processing Time: {end_time - start_time:.2f} seconds")
     print("Video processing completed.")
+    print(f"Total cars detected: {total_cars_detected}")  # Display total cars detected
 
     cap.release()
 
