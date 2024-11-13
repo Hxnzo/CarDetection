@@ -51,7 +51,7 @@ def process_video(video_path, car_cascade):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python object_detection_cli.py <video_path>")
+        print("Usage: python carDetectionARM64.py <video_path>")
         sys.exit(1)
 
     video_path = sys.argv[1]
