@@ -69,6 +69,7 @@
 
 import cv2
 import time
+import sys
 
 def main():
     if len(sys.argv) < 2:
