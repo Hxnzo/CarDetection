@@ -3,7 +3,7 @@ import time
 import sys
 
 # Constants
-CASCADE_FILE = 'car_cascade.xml'
+CASCADE_FILE = 'cars.xml'
 
 def load_cascade(cascade_file):
     car_cascade = cv2.CascadeClassifier(cascade_file)
