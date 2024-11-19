@@ -35,7 +35,7 @@ def process_video(video_path, car_cascade):
     fps = cap.get(cv2.CAP_PROP_FPS)
     print(f"Video Info: {total_frames} frames, {fps} FPS")
 
-    start_time = time.time()  # Start timing
+    start_time = time.time()
     frame_counter = 0
 
     while True:
@@ -57,13 +57,12 @@ def process_video(video_path, car_cascade):
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
-        # Log time taken for the frame
+            
         frame_end_time = time.time()
         frame_processing_time = frame_end_time - frame_start_time
         print(f"Frame {frame_counter}: {frame_processing_time:.2f} seconds")
 
-    end_time = time.time()  # End timing
+    end_time = time.time()
     elapsed_time = end_time - start_time
     print(f"Total Elapsed Time: {elapsed_time:.2f} seconds")
 
