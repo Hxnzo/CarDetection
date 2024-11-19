@@ -1,4 +1,4 @@
-# Embedded Systems Assignment 2: CarDetection Algorithm On QEMU
+# CarDetection Algorithm On QEMU
 
 #### Please refer to the pdf file in the repository for instructions on how to run the project
 
