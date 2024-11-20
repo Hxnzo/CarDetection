@@ -2,7 +2,7 @@ import cv2
 import time
 import sys
 
-# Constants:
+# Constants: 
 # Haar cascade file for car detection
 CASCADE_FILE = 'cars.xml'  
 # Window name for displaying the video
